@@ -1,0 +1,65 @@
+o aluno estudou para a prova de estatística
+o aluno estudou para a prova de matemática
+o aluno estudou para a prova de programação
+o aluno estudou para a prova de análise de dados
+o aluno estudou para a prova de português
+
+o professor explicou a matéria de estatística
+o professor explicou a matéria de matemática
+o professor explicou a matéria de programação
+o professor explicou a matéria de análise de dados
+
+o aluno fez a atividade de estatística
+o aluno fez a atividade de programação
+o aluno fez a atividade de análise de dados
+o aluno fez a atividade de matemática
+
+a prova de estatística foi difícil
+a prova de matemática foi difícil
+a prova de programação foi difícil
+a prova de análise de dados foi difícil
+
+o estudante estudou bastante para a prova
+o estudante fez exercícios antes da prova
+o estudante revisou a matéria antes da prova
+o estudante respondeu as questões da prova
+
+a análise de dados utiliza estatística
+a análise de dados utiliza programação
+a análise de dados utiliza matemática
+a análise de dados utiliza python
+
+python é uma linguagem de programação
+python é utilizada para análise de dados
+python é utilizada em ciência de dados
+python permite trabalhar com dados
+
+o professor ensina programação
+o professor ensina matemática
+o professor ensina estatística
+o professor ensina análise de dados
+
+os alunos estudam programação
+os alunos estudam matemática
+os alunos estudam estatística
+os alunos estudam análise de dados
+
+a tecnologia ajuda os estudantes
+a tecnologia ajuda os professores
+a tecnologia facilita o aprendizado
+a tecnologia facilita a análise de dados
+
+o sistema analisa os dados
+o sistema processa os dados
+o sistema apresenta os resultados
+o sistema gera previsões
+o sistema utiliza probabilidades
+
+a probabilidade representa a chance de um evento
+a probabilidade pode ser calculada matematicamente
+a probabilidade ajuda na tomada de decisões
+o teorema de bayes utiliza probabilidade condicional
+
+o teorema de bayes permite calcular probabilidades
+o teorema de bayes é utilizado em inteligência artificial
+o teorema de bayes pode ser utilizado para previsão
