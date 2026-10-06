@@ -1,8 +1,8 @@
 # Sistema Preditivo de Palavras
 
-## Análise Exploratória de Dados — Exercício-Programa
+## Análise Exploratória de Dados – Exercício-Programa
 
-Sistema inteligente de autocompletação de texto desenvolvido em Python utilizando conceitos de probabilidade condicional, n-grams, Teorema de Bayes e Laplace Smoothing.
+Sistema inteligente de autocompletação de texto desenvolvido em Python utilizando conceitos de probabilidade condicional, N-grams, Teorema de Bayes e Laplace Smoothing.
 
 O objetivo do projeto é analisar uma frase fornecida pelo usuário e sugerir a próxima palavra mais provável, apresentando também uma porcentagem de confiança para a previsão.
 
@@ -28,14 +28,14 @@ O modelo utiliza informações obtidas a partir de um corpus textual para calcul
 
 ## 2. Tecnologias utilizadas
 
-* Python 3.10+
-* pytest
-* Programação Orientada a Objetos
-* Type Hints
-* Probabilidade Condicional
-* N-grams
-* Laplace Smoothing
-* Teorema de Bayes
+- Python 3.10+
+- Pytest
+- Programação Orientada a Objetos
+- Type Hints
+- Probabilidade Condicional
+- N-grams
+- Laplace Smoothing
+- Teorema de Bayes
 
 ---
 
@@ -57,7 +57,8 @@ sistema-preditivo-palavras/
 │   └── test_modelo.py
 │
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── pytest.ini
 ```
 
 ### `src/corpus.py`
@@ -78,12 +79,12 @@ Contém a implementação do modelo probabilístico.
 
 O arquivo realiza:
 
-* Contagem das palavras;
-* Construção dos bigramas;
-* Construção dos trigramas;
-* Cálculo das probabilidades;
-* Aplicação de Laplace Smoothing;
-* Predição da próxima palavra.
+- Contagem das palavras;
+- Construção dos bigramas;
+- Construção dos trigramas;
+- Cálculo das probabilidades;
+- Aplicação de Laplace Smoothing;
+- Predição da próxima palavra.
 
 ### `src/main.py`
 
@@ -98,17 +99,17 @@ Confiança: XX.XX%
 
 ### `data/corpus.txt`
 
-Contém o conjunto de textos utilizados pelo modelo para aprender as relações entre as palavras.
+Contém os textos utilizados pelo modelo para aprender as relações entre as palavras.
 
 ### `tests/test_modelo.py`
 
-Contém testes automatizados para validar o funcionamento do modelo.
+Contém testes automatizados para verificar o funcionamento do modelo.
 
 ---
 
 ## 4. N-grams
 
-O sistema utiliza dois tipos de n-grams.
+O sistema utiliza dois tipos de N-grams.
 
 ### Bigramas
 
@@ -124,13 +125,13 @@ para a
 a prova
 ```
 
-Nesse caso podemos calcular:
+Nesse caso, podemos calcular:
 
 ```text
 P(aluno | o)
 ```
 
-ou seja, a probabilidade de aparecer a palavra "aluno" depois de "o".
+Ou seja, a probabilidade de aparecer a palavra `aluno` depois da palavra `o`.
 
 ### Trigramas
 
@@ -184,9 +185,9 @@ P(Wn | Contexto) =
 P(Contexto | Wn) * P(Wn) / P(Contexto)
 ```
 
-Na implementação, a previsão é operacionalizada através das probabilidades condicionais obtidas das frequências dos n-grams.
+Na implementação, a previsão utiliza probabilidades condicionais obtidas a partir das frequências dos N-grams.
 
-Dessa forma, o modelo utiliza a informação observada no corpus para estimar a probabilidade da próxima palavra.
+Dessa forma, o modelo utiliza as informações observadas no corpus para estimar a probabilidade da próxima palavra.
 
 ---
 
@@ -200,7 +201,7 @@ Por exemplo, caso uma determinada combinação de palavras não apareça no corp
 P(palavra | contexto) = 0
 ```
 
-Para evitar esse problema, foi utilizado Laplace Smoothing.
+Para evitar esse problema, foi utilizado o Laplace Smoothing.
 
 A fórmula utilizada é:
 
@@ -212,9 +213,9 @@ P(w | contexto) =
 
 Onde:
 
-* `C(contexto, w)` = quantidade de ocorrências da combinação;
-* `C(contexto)` = quantidade de ocorrências do contexto;
-* `V` = tamanho do vocabulário.
+- `C(contexto, w)` = quantidade de ocorrências da combinação;
+- `C(contexto)` = quantidade de ocorrências do contexto;
+- `V` = tamanho do vocabulário.
 
 O acréscimo de `1` permite que palavras que ainda não apareceram naquele contexto recebam uma pequena probabilidade em vez de zero.
 
@@ -242,7 +243,7 @@ Exemplo:
 o aluno estudou
 ```
 
-O programa então apresentará:
+O programa apresentará:
 
 ```text
 Resultado:
@@ -256,7 +257,7 @@ A palavra e a confiança dependem do conteúdo e das frequências existentes no 
 
 ## 9. Executando os testes
 
-Primeiro instale o pytest:
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
@@ -265,17 +266,23 @@ pip install -r requirements.txt
 Depois execute:
 
 ```bash
-pytest
+python -m pytest
 ```
 
-Os testes verificam, entre outros pontos:
+Resultado esperado:
 
-* Existência do vocabulário;
-* Cálculo de probabilidades;
-* Funcionamento dos bigramas;
-* Funcionamento dos trigramas;
-* Geração de uma previsão;
-* Valor válido para a confiança.
+```text
+5 passed
+```
+
+Os testes verificam:
+
+- Existência do vocabulário;
+- Cálculo de probabilidades;
+- Funcionamento dos bigramas;
+- Funcionamento dos trigramas;
+- Geração de uma previsão;
+- Valor válido para a confiança.
 
 ---
 
@@ -305,15 +312,14 @@ Além disso, o modelo não possui compreensão semântica da linguagem. Ele real
 
 Como trabalhos futuros, o sistema poderia receber:
 
-* Corpus muito maior;
-* Mais tipos de n-grams;
-* Tratamento de palavras desconhecidas;
-* Remoção de stopwords em análises específicas;
-* Interface gráfica;
-* API para utilização do modelo;
-* Comparação entre diferentes técnicas de suavização;
-* Métricas mais completas de avaliação;
-* Modelos de linguagem mais avançados.
+- Corpus maior;
+- Mais tipos de N-grams;
+- Tratamento de palavras desconhecidas;
+- Interface gráfica;
+- API para utilização do modelo;
+- Comparação entre diferentes técnicas de suavização;
+- Métricas mais completas de avaliação;
+- Modelos de linguagem mais avançados.
 
 ---
 
@@ -321,6 +327,6 @@ Como trabalhos futuros, o sistema poderia receber:
 
 O projeto demonstra a aplicação prática de conceitos de probabilidade e análise de dados na construção de um sistema preditivo.
 
-Através da utilização de n-grams, probabilidades condicionais e Laplace Smoothing, foi desenvolvido um modelo capaz de analisar um contexto textual e estimar qual palavra possui maior probabilidade de aparecer em seguida.
+Através da utilização de N-grams, probabilidades condicionais e Laplace Smoothing, foi desenvolvido um modelo capaz de analisar um contexto textual e estimar qual palavra possui maior probabilidade de aparecer em seguida.
 
 O desenvolvimento também permitiu aplicar conceitos de limpeza de dados, contagem de frequências, modelagem probabilística, modularização, testes automatizados e documentação de software.
